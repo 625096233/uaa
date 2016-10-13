@@ -26,6 +26,26 @@ public class IdentityZoneConfiguration {
 
     private TokenPolicy tokenPolicy = new TokenPolicy();
     private SamlConfig samlConfig = new SamlConfig();
+
+    public CorsConfiguration getXhrConfiguration() {
+        return xhrConfiguration;
+    }
+
+    public void setXhrConfiguration(CorsConfiguration xhrConfiguration) {
+        this.xhrConfiguration = xhrConfiguration;
+    }
+
+    private CorsConfiguration xhrConfiguration = new CorsConfiguration();
+
+    public CorsConfiguration getDefaultConfiguration() {
+        return defaultConfiguration;
+    }
+
+    public void setDefaultConfiguration(CorsConfiguration defaultConfiguration) {
+        this.defaultConfiguration = defaultConfiguration;
+    }
+
+    private CorsConfiguration defaultConfiguration = new CorsConfiguration();
     private Links links = new Links();
     private List<Prompt> prompts = Arrays.asList(
         new Prompt("username", "text", "Email"),
